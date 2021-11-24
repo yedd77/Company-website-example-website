@@ -1,0 +1,38 @@
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px 3%;
+    background-color: #181818;
+}
+
+.text-header{
+    width: auto;
+    height: 100%;
+    text-align: center;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    height: 10px;
+}
+  
+.nav_links a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+}
+  
+.nav_links li {
+    padding: 0px 20px;
+}
+  
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+  
+.nav_links li a:hover {
+    color: #08FDD8;
+}
