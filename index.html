@@ -8,32 +8,43 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" href="https://imgur.com/8nRxJJq.jpg">
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
+    <!--Twitter Embedded-->
     <title>Kyoto Animation</title>
 </head>
 
 <body>
-    <!--Top image-->
-    <div class="text-header">
-        <br>
-        <img style="width: 400px; height: auto;" src="https://imgur.com/222xlvy.jpg" alt="KyotoLogo">
+    <div class="top">
+        <!--Top image-->
+        <div class="text-header">
+            <br>
+            <img style="width: 400px; height: auto;" src="https://imgur.com/222xlvy.jpg" alt="KyotoLogo">
+        </div>
+
+        <!--NavBar-->
+        <header>
+            <div style="padding-left: 20px;"> 
+                <lord-icon id="icon" src="https://cdn.lordicon.com/jqyglkav.json" trigger="loop" colors="primary:#ffa600,secondary:#E6521E"
+                    scale="50" style="width:50px; height:50px;">
+                </lord-icon>
+            </div>
+            <div>
+                <nav>
+                    <ul class="nav_links">
+                        <li><a href="#News">News</a></li>
+                        <div class="vert"></div>
+                        <li><a href="#Works">Works</a></li>
+                        <div class="vert"></div>
+                        <li><a href="#Recruit">Recruit</a></li>
+                        <div class="vert"></div>
+                        <li><a href="#Shop">Shop</a></li>
+                    </ul>
+                </nav>
+                </div>
+        </header>
+        
     </div>
 
-    <!--NavBar-->
-    <header>
-        <div>
-            <nav>
-                <ul class="nav_links">
-                    <li><a href="#News">News</a></li>
-                    <div class="vert"></div>
-                    <li><a href="#Works">Works</a></li>
-                    <div class="vert"></div>
-                    <li><a href="#Recruit">Recruit</a></li>
-                    <div class="vert"></div>
-                    <li><a href="#Shop">Shop</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
     <!--Content-->
     <div>
@@ -160,7 +171,7 @@
                     </div>
                 </div>
                 <br>
-
+ 
                 <!--Row 2-->
                 <div class="wrapper">
 
@@ -378,7 +389,7 @@
                 <h1>Twitter</h1>
                 <hr>
                 <br>
-                <a class="twitter-timeline" href="https://twitter.com/kyoani?ref_src=twsrc%5Etfw" data-theme="light"
+                <a class="twitter-timeline" href="https://twitter.com/kyoani?ref_src=twsrc%5Etfw" data-theme="dark"
                     data-height="800" data-chrome="noscrollbar">
                     Tweets by kyoani
                 </a>
@@ -427,6 +438,13 @@
         }
     </script>
 
+    <script>
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            document.body.classList.toggle("dark");
+        }
+    </script>
     <!--Footer-->
     <div class="foot">
         <p>

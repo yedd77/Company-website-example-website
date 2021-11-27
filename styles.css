@@ -1,18 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap');
 
+
 * {
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
 }
 
-div{
-    display: block;
+/*Darkmode*/
+:root{
+    --left-color: #EBEBEB;
+    --right-color: #DFDFDF;
+    --Lefttext-color: #333333;
 }
 
-body{
-    background-color: #ffffff;
+.dark{
+    --left-color: #232628;
+    --right-color: #444748;
+    --Lefttext-color: #fff;
+}
+
+#icon{
+    width: 30px;
+    cursor: pointer;
+}
+
+
+div{
+    display: block;
 }
 
 hr {
@@ -21,6 +37,10 @@ hr {
     color: #C1C1C1;
     background-color: #C1C1C1;
 }
+
+.top{
+    background-color: var(--left-color);
+}
 /*Top Image*/
 header{
     display: flex;
@@ -28,6 +48,7 @@ header{
     align-items: center;    
     padding: 20px;
     padding-left: 0%;
+    width: 35%;
 }
 
 .text-header{
@@ -56,7 +77,7 @@ header{
 .nav_links a{
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
-    color: #000000;
+    color: var(--Lefttext-color);
     text-decoration: none;
 }
 
@@ -65,7 +86,7 @@ header{
 }
 
 .vert{
-    border-left: 1px solid #000000;
+    border-left: 1px solid var(--Lefttext-color);
 }
 
 /*Content*/
@@ -78,7 +99,7 @@ header{
     width: 80%;
     font-family: "calibri";
     padding-left: 30px;
-    background-color: #EBEBEB;
+    background-color: var(--left-color);
     padding-right: 30px;
 }
 
@@ -89,17 +110,11 @@ header{
 }
 
 .left p{
-    color: #333333;
+    color: var(--Lefttext-color);
     font-size: 18px;
     font-weight: 400;
     padding-top: 10px;
     font-family: 'Outfit';
-}
-
-figcaption{
-    text-align: center;
-    color: #e6e6e6;
-    padding-top: 10px;
 }
 
 .leftimg{
@@ -109,7 +124,7 @@ figcaption{
 
 .right{
     width: 20%;
-    background-color: #DFDFDF;
+    background-color: var(--right-color);
     font-family: "calibri";
     padding-left: 30px;
     padding-right: 30px;
@@ -118,6 +133,7 @@ figcaption{
 
 .right h1{
     padding-top: 20px;
+    color: var(--Lefttext-color);
 }
 
 .QText{
@@ -129,7 +145,6 @@ figcaption{
 .Qimg{
     padding-left: 25%;
 }
-
 
 /* Slideshow */
 .slideshow-container {
@@ -267,12 +282,14 @@ figcaption{
 }
 
 .inforText p{
-    color: #000000;
+    color: var(--Lefttext-color);
 }
 
 /*footer*/
 .foot{
     text-align: center;
-    margin: 5px;
+    margin: 0;
     padding-top: 30px;
+    color: var(--Lefttext-color);
+    background-color: var(--left-color);
 }
