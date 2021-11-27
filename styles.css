@@ -3,6 +3,8 @@
 
 * {
     box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
 }
 
 div{
@@ -10,7 +12,7 @@ div{
 }
 
 body{
-    background-color: #181818;
+    background-color: #ffffff;
 }
 
 hr {
@@ -22,26 +24,29 @@ hr {
 /*Top Image*/
 header{
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 25px 3%;
+    justify-content: flex-start;
+    align-items: center;    
+    padding: 20px;
+    padding-left: 0%;
 }
 
 .text-header{
     width: auto;
     height: 100%;
-    text-align: center;
-    padding-right: 10%;
+    text-align: left;
+    padding-left: 10px;
 }
 
 /*Nav Bar*/
 .nav_links{
     list-style: none;
     display: flex;
+    padding-left: 0%;
 }
 
 .nav_links li{
     padding: 0px 20px;
+    margin-top: 0%;
 }
 
 .nav_links li a{
@@ -50,13 +55,17 @@ header{
 
 .nav_links a{
     font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    color: #e6e6e6;
+    font-weight: 700;
+    color: #000000;
     text-decoration: none;
 }
 
 .nav_links li a:hover{
-    color: #FBD564;
+    color: #E7471B;
+}
+
+.vert{
+    border-left: 1px solid #000000;
 }
 
 /*Content*/
@@ -66,20 +75,21 @@ header{
 }
 
 .left{
-    width: 70%;
-    background-color: #232628;  
+    width: 80%;
     font-family: "calibri";
     padding-left: 30px;
+    background-color: #EBEBEB;
     padding-right: 30px;
 }
 
 .left h1{
-    color: #C1C1C1;
+    color: #E6521E;
     font-weight: lighter;
+    padding-bottom: 0%;
 }
 
 .left p{
-    color: #DFDFDF;
+    color: #333333;
     font-size: 18px;
     font-weight: 400;
     padding-top: 10px;
@@ -98,20 +108,16 @@ figcaption{
 }
 
 .right{
-    width: 30%;
-    background-color: #444748;
+    width: 20%;
+    background-color: #DFDFDF;
     font-family: "calibri";
     padding-left: 30px;
     padding-right: 30px;
+    height: 1946px;
 }
 
 .right h1{
-    color: #C1C1C1;
-    font-weight: lighter;
-}
-
-table{
-    width: 100%;
+    padding-top: 20px;
 }
 
 .QText{
@@ -122,4 +128,151 @@ table{
 
 .Qimg{
     padding-left: 25%;
+}
+
+
+/* Slideshow */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    padding-left: 135px;
+}
+    
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.active {
+    background-color: #717171;
+}
+  
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+}
+
+/*image Gallery*/
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper > * {
+    margin: 5px;
+}
+.media {
+    width: 225px;
+    height: 324px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.media img {
+    width: 225px;
+    height: 324px;
+}
+.layer {
+    opacity: 0;
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: #181818f8;
+    color: #ffffff;
+    transition: all 0.9s ease;
+}
+.layer p {
+    transition: all 0.9s ease;
+    transform: scale(0.1);
+    color: #FFFFFF;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.media:hover .layer {
+    opacity: 0.8;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.media:hover .layer p {
+    transform: scale(1);
+    transition: all 0.9s ease;
+}
+@media (max-width: 800px) {
+    body {
+        transform: scale(0.6);
+   }
+}
+@media (max-width: 600px) {
+    .wrapper {
+        display: block;
+   }
+    .wrapper > * {
+        margin: 10px;
+   }
+}
+
+/*information*/
+.informationContentList {
+    height: 360px;
+    width: 100%;
+    overflow: auto;
+}
+
+.informationData {
+    border-bottom: 1px #ccc dotted;
+}
+
+.informationData:hover{
+    background-color: #b3b3b38a;
+    color: #E6521E;
+}
+
+.inforText {
+    display: table-cell;
+    width: 520px;
+    padding: 10px 0 15px 10px;
+    vertical-align: middle;
+}
+
+.informationData a{
+    text-decoration: none;
+}
+
+.inforText time{
+    color: #E6521E;
+}
+
+.inforText p{
+    color: #000000;
+}
+
+/*footer*/
+.foot{
+    text-align: center;
+    margin: 5px;
+    padding-top: 30px;
 }
